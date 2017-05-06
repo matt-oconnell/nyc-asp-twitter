@@ -2,6 +2,8 @@ import twitter
 import re
 import os
 
+if not os.environ.get('CONSUMER_KEY'):
+    execfile('keys.py')
 
 api = twitter.Api(consumer_key=os.environ.get('CONSUMER_KEY'),
                   consumer_secret=os.environ.get('CONSUMER_SECRET'),
