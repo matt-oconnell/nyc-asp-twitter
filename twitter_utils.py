@@ -1,11 +1,13 @@
 import twitter
-import keys
 import re
+import os
 
-api = twitter.Api(consumer_key=keys.consumer_key,
-                  consumer_secret=keys.consumer_secret,
-                  access_token_key=keys.access_token_key,
-                  access_token_secret=keys.access_token_secret)
+
+api = twitter.Api(consumer_key=os.environ.get('CONSUMER_KEY'),
+                  consumer_secret=os.environ.get('CONSUMER_SECRET'),
+                  access_token_key=os.environ.get('ACCESS_TOKEN_KEY'),
+                  access_token_secret=os.environ.get('ACCESS_TOKEN_SECRET')
+                  )
 
 
 def getSuspendedDates(str):
