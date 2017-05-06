@@ -7,9 +7,5 @@ app = Flask(__name__)
 def index():
     return jsonify(twitter_utils.getParkingTweets())
 
-@app.route('/test')
-def test():
-    return jsonify(twitter_utils.getParkingTweets())
-
 if __name__ == "__main__":
     app.run()
