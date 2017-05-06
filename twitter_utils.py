@@ -4,7 +4,7 @@ from datetime import datetime
 import re
 import os
 
-if not os.environ.get('CONSUMER_KEY'):
+if not os.environ.get('DEPLOYMENT'):
     execfile('keys.py')
 
 api = twitter.Api(consumer_key=os.environ.get('CONSUMER_KEY'),
